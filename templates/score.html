@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <div class="container card">
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+
+<script>
+
+let myChart = document.getElementById('myChart').getContext('2d'); 
+
+let joy = '{{ data["joy"] }}' || 0; 
+let confident = '{{ data["confident"] }}' || 0; 
+let analytical = '{{ data["analytical"] }}' || 0; 
+let anger = '{{ data["anger"] }}' || 0; 
+let tentative = '{{ data["tentative"] }}' || 0; 
+let sadness = '{{ data["sadness"] }}' || 0; 
+let fear = '{{ data["fear"] }}' || 0; 
+
+console.log("here should be joy ----->", joy); 
+
+let chart = new Chart(myChart, {
+    type: 'bar', 
+    data: {
+        labels: [
+            'joy', 
+            'analytical', 
+            'confident',
+            'anger',
+            'tentative',
+            'sadness',
+            'joy',
+            'fear' ], 
+        datasets: [{
+            label: 'Scores', 
+            data: [joy, confident, analytical, anger, tentative, sadness, fear], 
+        backgroundColor: ['green']
+
+        }]
+    }, 
+    options: {}
+})
+
+</script>
+</html>
