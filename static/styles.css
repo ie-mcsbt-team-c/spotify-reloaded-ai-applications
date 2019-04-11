@@ -1,0 +1,61 @@
+.btn-primary {
+    color: #fff !important;
+    background-color: #1eD760 !important;
+    border-color: #1eD760 !important;
+    border-radius: 21px !important;
+}
+
+.card {
+    background-color: #513751 !important; 
+    border-radius: 20px !important;
+
+}
+
+.card-text {
+    text-align: center !important; 
+    color: #fff !important;
+}
+
+body {
+    background-color: #000 !important;
+}
+
+.title {
+    color: white; 
+    display: inline-block !important;
+    margin-bottom: .5rem !important;
+}
+
+label.title {
+    font-weight: bold;
+}
+
+button.button-songs {
+    margin-left: 150px; 
+    background-color: #1eD760 !important;
+    border-color: #1eD760 !important;
+    border-radius: 21px !important;
+}
+
+
+div#stack {
+    margin: 15px;
+
+}
+
+h3.card-title {
+    text-align: center;
+    color: white;
+}
+
+img.card-img-top {
+    width: 150px;
+    margin: 0 auto;
+
+
+}
+
+h1.title-screen {
+    color: white;
+    font-weight: 700;
+}

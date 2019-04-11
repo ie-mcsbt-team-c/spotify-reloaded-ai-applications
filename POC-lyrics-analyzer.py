@@ -14,12 +14,13 @@ from flask import Flask, render_template, jsonify, request
 from jinja2 import Template
 
 
-app = Flask(__name__)
+app = Flask("index", template_folder='templates')
 
 
-@app.route("/")
+@app.route("/", methods=["GET","POST"])
 def root(): 
 
+        
     return render_template("index.html")
 
 
